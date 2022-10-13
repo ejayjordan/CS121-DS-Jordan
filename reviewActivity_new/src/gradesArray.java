@@ -7,12 +7,12 @@ public class gradesArray {
         int num = Integer.parseInt(console.nextLine());
         System.out.println();
 
-        ArrayList<String> names= new ArrayList<>(num);
-        ArrayList<Integer> credits= new ArrayList<>(num);
-        ArrayList<Integer> score= new ArrayList<>(num);
-        ArrayList<Character> grades= new ArrayList<>(num);
+        ArrayList<String> names= new ArrayList<>();
+        ArrayList<Integer> credits= new ArrayList<>();
+        ArrayList<Integer> score= new ArrayList<>();
+        ArrayList<Character> grades= new ArrayList<>();
 
-        for (int i = 0; i < names; i++) {
+        for (int i = 0; i < num; i++) {
             int j = i + 1;
             System.out.printf("Enter course %d name:\n", j);
             names.set(i, console.nextLine());
