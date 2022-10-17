@@ -3,43 +3,47 @@ import java.util.Scanner;
 public class gradesArray {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Enter number of courses:");
-        int num = Integer.parseInt(console.nextLine());
-        System.out.println();
-
         ArrayList<String> names= new ArrayList<>();
         ArrayList<Integer> credits= new ArrayList<>();
         ArrayList<Integer> score= new ArrayList<>();
         ArrayList<Character> grades= new ArrayList<>();
+        int number = 1;
+        String course;
 
-        for (int i = 0; i < num; i++) {
-            int j = i + 1;
-            System.out.printf("Enter course %d name:\n", j);
-            names.add(String.valueOf(i));
-            System.out.printf("Enter course %d credit hours:\n", j);
-            credits.add(i);
-            System.out.printf("Enter course %d score:\n", j);
-            score.add(i);
+        while(true) {
+            System.out.printf("Enter course %d name or 'q' to quit:\n", number);
+            course = console.nextLine();
+            if (course.equalsIgnoreCase("q")) {
+                break;
+            }
+            names.add(course);
+            System.out.printf("Enter course %d credit hours:\n", number);
+            credits.add(Integer.parseInt(console.nextLine()));
+            System.out.printf("Enter course %d score:\n", number);
+            score.add(Integer.parseInt(console.nextLine()));
             System.out.println();
+            number++;
         }
-        for (int i = 0; score < i; i++) {
-            if (score >= 90) {
-                grades.add(i);
-            } else if (score >= 80) {
-                grades.add(i);
-            } else if (score >= 70) {
-                grades.add(i);
-            } else if (score >= 60) {
-                grades.add(i);
+
+        for (int scores : score) {
+            if (scores >= 90) {
+                grades.add('A');
+            } else if (scores >= 80) {
+                grades.add('B');
+            } else if (scores >= 70) {
+                grades.add('C');
+            } else if (scores >= 60) {
+                grades.add('D');
             } else {
-                grades.add(i);
+                grades.add('F');
             }
         }
+
         System.out.printf("\n%-7s %-5s %-5s %-6s\n",
                 "Course", "Hours", "Score", "Grade");
-        for (int i = 0; i < names; i++) {
+        for (int i = 0; i < names.size(); i++) {
             System.out.printf("%-8s %-5d %-5d %-6c\n",
-                    names, credits, score, grades);
+                    names.get(i), credits.get(i), score.get(i), grades.get(i));
         }
     }
 }
