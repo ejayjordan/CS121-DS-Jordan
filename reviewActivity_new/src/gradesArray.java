@@ -15,31 +15,31 @@ public class gradesArray {
         for (int i = 0; i < num; i++) {
             int j = i + 1;
             System.out.printf("Enter course %d name:\n", j);
-            names.set(i, console.nextLine());
+            names.add(String.valueOf(i));
             System.out.printf("Enter course %d credit hours:\n", j);
-            names.set(i, Integer.parseInt(console.nextLine()));
+            credits.add(i);
             System.out.printf("Enter course %d score:\n", j);
-            names.set(i, Integer.parseInt(console.nextLine()));
+            score.add(i);
             System.out.println();
         }
-        for (int i = 0; i < score; i++) {
-            if (score.get(i) >= 90) {
-                grades.set(i, 'A');
-            } else if (score.get(i) >= 80) {
-                grades.set(i, 'B');
-            } else if (score.get(i) >= 70) {
-                grades.set(i, 'C');
-            } else if (score.get(i) >= 60) {
-                grades.set(i, 'D');
+        for (int i = 0; score < i; i++) {
+            if (score >= 90) {
+                grades.add(i);
+            } else if (score >= 80) {
+                grades.add(i);
+            } else if (score >= 70) {
+                grades.add(i);
+            } else if (score >= 60) {
+                grades.add(i);
             } else {
-                grades.set(i, 'F');
+                grades.add(i);
             }
         }
         System.out.printf("\n%-7s %-5s %-5s %-6s\n",
                 "Course", "Hours", "Score", "Grade");
         for (int i = 0; i < names; i++) {
             System.out.printf("%-8s %-5d %-5d %-6c\n",
-                    names.get(i), credits.get(i), score.get(i), grades.get(i));
+                    names, credits, score, grades);
         }
     }
 }
