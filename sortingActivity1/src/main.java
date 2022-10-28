@@ -1,6 +1,9 @@
-import java.util.Arrays;
+import java.util.ArrayList;
+
 public class main {
     public static void main (String[] args){
-        Sorting sorter = new Sorting();
+        sorting sorter = new sorting();
+
+        int[] = sorter.getArray();
     }
 }
