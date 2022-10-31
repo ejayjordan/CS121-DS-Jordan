@@ -1,18 +1,24 @@
 import java.util.Scanner;
+
 public class sorting {
     Scanner console = new Scanner(System.in);
     int[] integers;
-    int number = 1;
 
     public int[] getArray() {
-        System.out.printf("Enter integer %d:\n", number);
-        int integer = console.nextInt();
-        integers.add(integer);
+        int[] integer = new int[5];
+        for (int i = 0; i < integer.length; i++)
+        {
+            System.out.printf("Enter integer %d: \n", i + 1);
+            int number = Integer.parseInt(console.nextLine());
+            integer[i] = number;
+        }
+        for (int num: integer)
+        {
+            System.out.print(num + " ");
+        }
         System.out.println();
-        number++;
-        return integers;
+        return integer;
     }
-
     public int[] sortArray() {
         int temp;
         for (int i = 0; i < integers.length - 1; i++) {

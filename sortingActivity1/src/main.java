@@ -1,5 +1,6 @@
 public class main {
     public static void main (String[] args) {
+
         sorting sorter = new sorting();
 
         int[] x = sorter.getArray();
@@ -12,9 +13,9 @@ public class main {
 
         System.out.println();
     }
-        public static void printArray(int[] integers){
-            for (int num: integers) {
-                System.out.print(num + " ");
+        public static void printArray(int[] array){
+            for (int number: array) {
+                System.out.print(number + " ");
             }
             System.out.println();
         }
