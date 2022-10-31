@@ -13,8 +13,8 @@ public class main {
 
         System.out.println();
     }
-        public static void printArray(int[] array){
-            for (int number: array) {
+        public static void printArray(int[] integers){
+            for (int number: integers) {
                 System.out.print(number + " ");
             }
             System.out.println();

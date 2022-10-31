@@ -5,31 +5,31 @@ public class sorting {
     int[] integers;
 
     public int[] getArray() {
-        int[] integer = new int[5];
-        for (int i = 0; i < integer.length; i++)
+        int[] integers = new int[5];
+        for (int i = 0; i < integers.length; i++)
         {
             System.out.printf("Enter integer %d: \n", i + 1);
             int number = Integer.parseInt(console.nextLine());
-            integer[i] = number;
+            integers[i] = number;
         }
-        for (int num: integer)
+        for (int num: integers)
         {
             System.out.print(num + " ");
         }
         System.out.println();
-        return integer;
-    }
-    public int[] sortArray() {
-        int temp;
-        for (int i = 0; i < integers.length - 1; i++) {
-            for (int index = 0; index < integers.length - i - 1; index++) {
-                if (integers[index] > integers[index + 1]) {
-                    temp = integers[index];
-                    integers[index] = integers[index + 1];
-                    integers[index + 1] = temp;
+        return integers;
+        }
+        public int[] sortArray() {
+            int temp;
+            for (int i = 0; i < integers.length - 1; i++) {
+                for (int index = 0; index < integers.length - i - 1; index++) {
+                    if (integers[index] > integers[index + 1]) {
+                        temp = integers[index];
+                        integers[index] = integers[index + 1];
+                        integers[index + 1] = temp;
+                    }
                 }
             }
+            return integers;
         }
-        return integers;
-    }
 }
