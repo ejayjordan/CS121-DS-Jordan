@@ -14,6 +14,6 @@ public class PokemonSelection {
         Pokespeed = Integer.parseInt(Scanner.nextLine());
     }
     public assignPokemon(){
-        
+
     }
 }
