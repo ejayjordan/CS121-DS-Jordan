@@ -15,10 +15,10 @@ public class Sorting {
         System.out.println();
         return integers;
     }
-    public int[] sortArray() {
+    public int[] sortArray(int[] integers) {
         int temp;
         for (int i = 0; i < integers.length - 1; i++) {
-            for (int index = 0; index < integers.length - i - 1; index++) {
+            for (int index = 0; index < (integers.length - i - 1); index++) {
                 if (integers[index] > integers[index + 1]) {
                     temp = integers[index];
                     integers[index] = integers[index + 1];
