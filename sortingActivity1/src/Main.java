@@ -1,4 +1,4 @@
-public class main {
+public class Main {
     public static void main (String[] args) {
 
         sorting sorter = new sorting();
@@ -13,11 +13,11 @@ public class main {
 
         System.out.println();
     }
-        public static void printArray(int[] integers){
-            for (int number: integers) {
-                System.out.print(number + " ");
-            }
-            System.out.println();
+    public static void printArray(int[] integers){
+        for (int number: integers) {
+            System.out.print(number + " ");
         }
+        System.out.println();
     }
+}
 

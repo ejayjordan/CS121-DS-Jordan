@@ -12,10 +12,6 @@ public class sorting {
             int number = Integer.parseInt(console.nextLine());
             integers[i] = number;
         }
-        for (int num: integers)
-        {
-            System.out.print(num + " ");
-        }
         System.out.println();
         return integers;
         }
