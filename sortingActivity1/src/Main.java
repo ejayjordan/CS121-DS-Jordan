@@ -1,13 +1,13 @@
 public class Main {
     public static void main (String[] args) {
 
-        sorting sorter = new sorting();
+        Sorting sorter = new Sorting();
 
         int[] x = sorter.getArray();
         System.out.println("Unsorted: ");
         printArray(x);
 
-        int[] y = sorter.sortArray();
+        int[] y = sorter.sortArray(x);
         System.out.println("Sorted: ");
         printArray(y);
 
