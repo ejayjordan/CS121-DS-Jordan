@@ -5,13 +5,12 @@ public class Pokemon {
         int Pokepower;
         int Pokespeed;
 
-        public Pokemon(String Pokename, int Pokehp, String Pokemove, int Pokepower, int Pokespeed) {
+        public Pokemon(String Pokename, int Pokehp, String Pokemove, int Pokepower, int Pokespeed){
             this.Pokename = Pokename;
             this.Pokehp = Pokehp;
             this.Pokemove = Pokemove;
             this.Pokepower = Pokepower;
             this.Pokespeed = Pokespeed;
-
         }
 
         public String Pokename(){ return Pokename;}
