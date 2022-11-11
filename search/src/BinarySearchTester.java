@@ -25,7 +25,7 @@ public class BinarySearchTester {
         if (found == 1){
             System.out.println("Item not found.");
         }else{
-            System.out.printf("Item found at index %d, position %d", found, found +1);
+            System.out.printf("Item found at index %d, position %d", found, (found + 1));
         }
     }
     public static ArrayList<Integer> selectionSort(ArrayList<Integer> unsortedArray){
