@@ -6,23 +6,27 @@ import java.util.Scanner;
 
 public class StudentSet {
     Scanner console = new Scanner(System.in);
-    Set<Integer> students = new HashSet<>();
-    ArrayList<Integer> intArray = new ArrayList<>();
+    public Set<String> students = new HashSet<String>();
+    public ArrayList<String> intArray = new ArrayList<>();
 
     public void addStudents() {
-        for (Integer num : intArray) {
+        while (true) {
             System.out.println("Enter any number of students to the set or press 'q' to quit");
             String student = console.nextLine();
-            if (student == "q") {
+            if (student.equals("q")) {
                 break;
+            } else {
+                for (String num : intArray) {
+                    students.add(student);
+                }
             }
         }
     }
-        public void displayStudents () {
-            Iterator<Integer> studentsIter = students.iterator();
-            while (studentsIter.hasNext()) {
-                Integer students = studentsIter.next();
-                System.out.println(students);
-            }
+    public void displayStudents () {
+        Iterator<String> studentsIter = students.iterator();
+        while (studentsIter.hasNext()) {
+            System.out.println(studentsIter.next());
         }
+        System.out.println();
     }
+}
