@@ -16,9 +16,7 @@ public class StudentSet {
             if (student.equals("q")) {
                 break;
             } else {
-                for (String num : intArray) {
                     students.add(student);
-                }
             }
         }
     }
