@@ -6,17 +6,15 @@ public class Student {
         public Integer ID;
         public String major;
         public String classStanding;
-        public Double GPA;
         LinkedList<Object> courseList = new LinkedList<>();
 
         public void constructor (String firstName, String lastName, Integer ID, String major, String
-        classStanding, Double GPA){
+        classStanding){
             this.firstName = firstName;
             this.lastName = lastName;
             this.ID = ID;
             this.major = major;
             this.major = classStanding;
-            this.GPA = GPA;
         }
 
         public void addCourse () {
@@ -43,8 +41,14 @@ public class Student {
         private String getClassStanding () {
             return this.classStanding;
         }
-        private String getGPA () {
-            return String.valueOf(this.GPA);
+
+        public void getStudentInfo(){
+            System.out.printf("""
+                    Student: %s %s
+                    ID: %s
+                    Major: %s
+                    Class: %s
+                    """, firstName, lastName, ID, major, classStanding);
         }
         public void displayStudentCourses () {
             System.out.printf("Courses\n" + "-----\n" + "%s\n", courseList);

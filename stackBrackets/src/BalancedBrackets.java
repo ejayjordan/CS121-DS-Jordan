@@ -8,8 +8,6 @@ public class BalancedBrackets {
             char c = string.charAt(i);
             if (c == '(') {
                 stack.push(c);
-            }if (c == ')') {
-                stack.push(c);
             } else{
                 stack.pop();
             }

@@ -6,6 +6,7 @@ public class BalancedBracketsTester {
         System.out.println(balanced.checkBalance("(()())"));
         System.out.println(balanced.checkBalance("((((()(())))))"));
         System.out.println(balanced.checkBalance("(()"));
+
         System.out.println(balanced.checkBalance("())"));
         System.out.println(balanced.checkBalance(")()"));
     }
