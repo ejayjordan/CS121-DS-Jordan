@@ -1,3 +1,4 @@
+
 import java.util.Stack;
 
 public class BalancedBrackets {
@@ -8,7 +9,12 @@ public class BalancedBrackets {
             char c = string.charAt(i);
             if (c == '(') {
                 stack.push(c);
-            } else{
+                // here is where you will check for the closing brackets
+            } else if(c == ')')
+            {   if(stack.empty())
+            {
+                return "unbalanced";
+            }
                 stack.pop();
             }
         }

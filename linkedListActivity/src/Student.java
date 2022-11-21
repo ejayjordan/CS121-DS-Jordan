@@ -1,31 +1,35 @@
 import java.util.LinkedList;
-
 public class Student {
         public String firstName;
         public String lastName;
         public Integer ID;
         public String major;
-        public String classStanding;
+        public String grade;
+        public Double GPA;
+        public String course;
         LinkedList<Object> courseList = new LinkedList<>();
 
-        public void constructor (String firstName, String lastName, Integer ID, String major, String
-        classStanding){
+        public void setStudent (String firstName, String lastName, Integer ID, String major, String grade, Double GPA){
             this.firstName = firstName;
             this.lastName = lastName;
             this.ID = ID;
             this.major = major;
-            this.major = classStanding;
+            this.grade = grade;
+            this.GPA = GPA;
         }
 
-        public void addCourse () {
-            courseList.add("cs121");
-            courseList.add("cs122");
-            courseList.add("cs222");
-            courseList.add("cs315");
+        public void addCourse (String course) {
+            this.course = course;
+            courseList.add(course);
         }
-        public void removeCourse () {
-            courseList.remove(0);
+        public void removeCourse (String course) {
+
+            courseList.remove(course);
+    }
+        public String getCourse(){
+            return this.course;
         }
+
         public String getFirstName () {
             return this.firstName;
         }
@@ -38,8 +42,11 @@ public class Student {
         private String getMajor () {
             return this.major;
         }
-        private String getClassStanding () {
-            return this.classStanding;
+        private String getGrade () {
+            return this.grade;
+        }
+        private Double getGPA(){
+            return this.GPA;
         }
 
         public void getStudentInfo(){
@@ -48,9 +55,10 @@ public class Student {
                     ID: %s
                     Major: %s
                     Class: %s
-                    """, firstName, lastName, ID, major, classStanding);
+                    GPA: %s
+                    """, firstName, lastName, ID, major, grade, GPA);
         }
         public void displayStudentCourses () {
-            System.out.printf("Courses\n" + "-----\n" + "%s\n", courseList);
+            System.out.printf("\nCourses\n" + "-----\n" + "%s\n\n", courseList);
         }
     }
