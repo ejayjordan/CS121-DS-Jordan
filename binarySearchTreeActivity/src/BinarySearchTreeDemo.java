@@ -3,7 +3,7 @@ public class BinarySearchTreeDemo
 	private Node root;
 	
 	// add a node to the tree
-	public void addNode(int key)
+	public void addNode(char key)
 	{
 		Node newNode = new Node(key); // create and initialize a new Node
 		
@@ -75,7 +75,7 @@ public class BinarySearchTreeDemo
 		}
 	}
 	
-	public String findNode(int key)
+	public String findNode(char key)
 	{
 		Node currentNode = root; // start at the root node
 		while (currentNode.getKey() != key) // while current node is not the key
@@ -101,7 +101,7 @@ public class BinarySearchTreeDemo
 		return root;
 	}
 	
-	public String removeNode(int key)
+	public String removeNode(char key)
 	{
 		Node currentNode = root; // start at top of tree
 		Node parent = root;

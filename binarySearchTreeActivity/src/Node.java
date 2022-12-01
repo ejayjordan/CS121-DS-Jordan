@@ -1,10 +1,10 @@
 public class Node
 {
-	private int key;
+	private char key;
 	private Node leftChild;
 	private Node rightChild;
 		
-	public Node(int key)
+	public Node(char key)
 	{
 		this.key = key;
 	}
