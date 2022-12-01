@@ -9,7 +9,7 @@ public class Node
 		this.key = key;
 	}
 	
-	public int getKey()
+	public char getKey()
 	{
 		return key;
 	}

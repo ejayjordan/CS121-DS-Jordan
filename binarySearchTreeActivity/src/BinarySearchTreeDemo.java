@@ -90,7 +90,7 @@ public class BinarySearchTreeDemo
 			}
 			if (currentNode == null) // if not found
 			{
-				return String.format("%d not found", key);
+				return String.format("%s not found", key);
 			}
 		}
 		return String.format("%d was found", currentNode.getKey()); // current node is key
@@ -122,7 +122,7 @@ public class BinarySearchTreeDemo
 			}
 			if (currentNode == null) // if node wasn't found
 			{
-				return String.format("%d not found", key);
+				return String.format("%s not found", key);
 			}
 		}
 		// if node has no children, remove it
@@ -186,7 +186,7 @@ public class BinarySearchTreeDemo
 			}
 			replacement.setLeftChild(currentNode.getLeftChild()); // set replacement's left child to removed node's left child
 		}
-		return String.format("%d was removed", key);
+		return String.format("%s was removed", key);
 	}
 	
 	public Node getReplacementNode(Node replacedNode)
