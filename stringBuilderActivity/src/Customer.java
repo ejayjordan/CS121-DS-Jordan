@@ -1,4 +1,3 @@
-package testBank;
 import java.util.ArrayList;
 
 public class Customer
@@ -6,9 +5,6 @@ public class Customer
     private String firstName;
     private String lastName;
     private String pin;
-    private ArrayList<SavingAccount> savingsAccounts = new ArrayList<>();
-    private ArrayList<CheckingAccount> checkingAccounts = new ArrayList<>();
-
     public Customer(String firstName, String lastName, String pin)
     {
         this.firstName = firstName;
@@ -44,60 +40,6 @@ public class Customer
     public void setPin(String pin)
     {
         this.pin = pin;
-    }
-
-    public void displaySavingsAccount()
-    {
-        // print all checking accounts info
-        for (SavingAccount account : savingsAccounts)
-        {
-            System.out.println(account.getAccountInfo());
-        }
-    }
-
-    public SavingAccount findSavingsAccount(int accountNumber)
-    {
-        SavingAccount found = null;
-        for (SavingAccount account : savingsAccounts)
-        {
-            if (account.getAccountNumber() == (accountNumber))
-            {
-                found = account;
-            }
-        }
-        return found;
-    }
-
-    public void addSavingsAccount(SavingAccount savingsAccount)
-    {
-        this.savingsAccounts.add(savingsAccount);
-    }
-
-    public void displayCheckingAccount()
-    {
-        // print all checking accounts info
-        for (CheckingAccount account : checkingAccounts)
-        {
-            System.out.println(account.getAccountInfo());
-        }
-    }
-
-    public CheckingAccount findCheckingAccount(int accountNumber)
-    {
-        CheckingAccount found = null;
-        for (CheckingAccount account : checkingAccounts)
-        {
-            if (account.getAccountNumber() == (accountNumber))
-            {
-                found = account;
-            }
-        }
-        return found;
-    }
-
-    public void addCheckingAccount(CheckingAccount checkingAccount)
-    {
-        this.checkingAccounts.add(checkingAccount);
     }
 
     public String customerInfo()
