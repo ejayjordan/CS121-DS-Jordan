@@ -2,7 +2,7 @@ public class Move {
     private String moveName;
     private int movePower;
 
-    public void moveInfo(String moveName, int movePower){
+    public Move(String moveName, int movePower){
         this.moveName = moveName;
         this.movePower = movePower;
     }

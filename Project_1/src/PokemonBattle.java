@@ -31,17 +31,6 @@ public class PokemonBattle {
         for (i = 1; i <= round; i++) {
             System.out.println();
             System.out.print("Round " + i + "\n-----");
-            System.out.print("\nPlayer 1 select a Pokemon and enter its stats:\n");
-            System.out.println("Enter name:\n");
-            Poke1name = scanner.nextLine();
-            System.out.println("Enter HP:\n");
-            Poke1hp = Integer.parseInt(scanner.nextLine());
-            System.out.println("Enter move:\n");
-            Poke1move = scanner.nextLine();
-            System.out.println("Enter power:\n");
-            Poke1power = Integer.parseInt(scanner.nextLine());
-            System.out.println("Enter speed:\n");
-            Poke1speed = Integer.parseInt(scanner.nextLine());
 
             System.out.println();
             System.out.print("\nPlayer 2 select a Pokemon and enter its stats:\n");
