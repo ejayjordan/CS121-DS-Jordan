@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 public class customerRecord {
     StringBuilder stringBuilder = new StringBuilder();
-    ArrayList<String> customers = new ArrayList<>();
+    ArrayList<Customer> customers = new ArrayList<>();
 
-    public void addCustomers() {
-
+    public void addCustomer(Customer userInput)
+    {
+        customers.add(userInput);
     }
+    public StringBuilder getAllCustomers()
+    {
+        for(Customer customer: customers)
+        {
+            stringBuilder.append(customer);
 
-    public String getAllCustomers() {
-        String allCustomers = "";
-        for (String customer : customers) {
-            System.out.println(stringBuilder.capacity());
-            System.out.println(stringBuilder);
         }
-        return allCustomers;
+        return stringBuilder;
     }
 }
-
