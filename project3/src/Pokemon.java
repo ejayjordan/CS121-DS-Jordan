@@ -6,7 +6,7 @@ public class Pokemon {
     private int spd;
     private ArrayList<Move> movesList = new ArrayList<Move>();
 
-    public Pokemon(String name, int hp, int spd){
+    public Object Pokemon(String name, int hp, int spd){
         this.name = name;
         this.hp = hp;
         this.spd = spd;
@@ -15,27 +15,33 @@ public class Pokemon {
     public void addMove(Move move){
         movesList.add(move);
     }
-    public void setHP(){
-
+    public void setHP(int hp){
+        this.hp = hp;
     }
 
     public String getName(){
-
+        return name;
     }
     public Integer getHP(){
-
+        return hp;
     }
     public Integer getSPD(){
-
+        return spd;
     }
-    public ArrayList getMovesList(){ return movesList;}
+    public ArrayList<Move> getMovesList(){ return movesList;}
     public String getPokemonInfo(){
         return String.format("Pokemon: %s\n"
                 + "HP: %s\n"
                 + "Speed: %s\n",
                 name, hp, spd);
     }
-    public void getMoveByName(Move move){
-
+    public Move getMoveByName(String moveName){
+        Move moveFound = null;
+        for(Move move: movesList){
+            if(move.getMoveName().equalsIgnoreCase(moveName)){
+                moveFound = move;
+            }
+        }
+        return moveFound;
     }
 }

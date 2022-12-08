@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87194d92-da8a-4647-9c21-feae366a8c5a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../project3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/src/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Pokedex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/src/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/src/PokemonBattle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/PokemonBattle.java" afterDir="false" />
-    </list>
+    <list default="true" id="87194d92-da8a-4647-9c21-feae366a8c5a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,13 +26,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/emmaj/OneDrive - Ball State University/FALL22-SPRING23/CS121/-Repositories/CS121-DS-Jordan/Project_1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/emmaj/OneDrive - Ball State University/FALL22-SPRING23/CS121/-Repositories/CS121-DS-Jordan/Project_1&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PokemonBattle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PokemonBattle" />

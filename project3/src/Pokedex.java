@@ -1,28 +1,33 @@
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Random;
 
 public class Pokedex {
     private Random random = new Random();
-    int number;
-    private ArrayList<Objects> pokeList = new ArrayList<Objects>();
+    private ArrayList<Pokemon> pokeList = new ArrayList<Pokemon>();
 
     public Pokedex(){return;}
 
-    public void addPokemon(Objects pokemon){
+    public void addPokemon(){
+        Pokemon pokemon = new Pokemon();
         pokeList.add(pokemon);
     }
-    public ArrayList getPokeList(){ return pokeList;}
-    public void selectPokemon(int number){
-        int index = number;
-
-
+    public ArrayList<Pokemon> getPokeList(){ return pokeList;}
+    public Pokemon selectPokemon(int index){
+        return pokeList.get(index);
     }
 
     public Pokemon getRandomPokemon(Pokemon randomPokemon){
-        return randomPokemon;
+        int randomPokemonIndex = pokeList.indexOf(randomPokemon);
+        int randomNumber = random.nextInt(pokeList.size());
+        if (randomNumber == randomPokemonIndex){
+            if (randomNumber == pokeList.size() - 1){
+                randomNumber = 0;
+            }else{
+                randomNumber += 1;
+            }
+        }
+        return pokeList.get(randomNumber);
     }
-    public Move getRandomMove(Pokemon randomPokemon){
-        return moveName;
+    public Move getRandomMove(Move move){
     }
 }
