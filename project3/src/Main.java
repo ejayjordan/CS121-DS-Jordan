@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args){
         PokemonBattle pokemonBattle = new PokemonBattle();
-        pokemonBattle.addPokemon();
+        //.addPokemon();
         pokemonBattle.selectPlayerPokemon();
         pokemonBattle.selectComputerPokemon();
-        pokemonBattle.battlePokemon();
+        //pokemonBattle.battlePokemon();
     }
 }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
@@ -8,66 +7,72 @@ public class PokemonBattle {
     private Random random = new Random();
     private Pokedex pokedex = new Pokedex();
 
-    public PokemonBattle() {
-        return;
+    public PokemonBattle() {return;}
+
+    public String displayPokeList(){
+        pokedex.getPokeList();
+        for(pokedex.getPokeList().size();;){
+            System.out.print(pokedex.getPokeList());
+            System.out.print(pokemon.getMovesList());
+        }
     }
 
-    public Pokemon addPokemonToGame(ArrayList<Objects> pokemon,ArrayList<Move> movesList) {
-        /*this is most likely, all wrong!!
-        String move;
-        String name;
-        int power;
-        int hp;
-        int spd;
-        while (true) {
-            System.out.println("Add a Pokemon\n");
-            System.out.println("----------\n");
+    public Object selectPlayerPokemon(){
+        Object playerPokemon = displayPokeList();
+        System.out.println("Enter number of your selected Pokemon: ");
+        int number = scanner.nextInt();
+        pokedex.selectPokemon(number);
+        return playerPokemon;
+    }
+
+    public Object selectComputerPokemon(){
+        Object computerPokemon = pokedex.getRandomPokemon();
+        return computerPokemon;
+    }
+        public void battlePokemon (Object playerPokemon, Object computerPokemon) {
+            int playerwin = 0;
+            int computerwin = 0;
+            System.out.println("Enter an odd number of rounds: ");
+            int round = Integer.parseInt(scanner.nextLine());
             System.out.println();
-            System.out.println("Enter new Pokemon name\nOr press 'q' to quit\n");
-            System.out.println("----------\n");
-            if (name.equals("q")) {
-                break;
-            } else {
-                name = scanner.nextLine();
-                System.out.printf("Enter %s hp: \n", name);
-                hp = Integer.parseInt(scanner.nextLine());
-                System.out.printf("Enter %s speed: \n", name);
-                spd = Integer.parseInt(scanner.nextLine());
 
-                System.out.println("********\n");
-                System.out.printf("Enter a %s move\nOr press 'q' to quit\n", name);
-                System.out.println("********\n");
-                if (move.equals("q")) {
-                    break;
-                } else {
-                    move = scanner.nextLine();
-                    System.out.printf("Enter %s's power: \n", move);
-                    power = Integer.parseInt(scanner.nextLine());
+            int i;
+            for (i = 1; i <= round; i++) {
+                System.out.println();
+                System.out.print("Round " + i + "\n-----");
+                System.out.println();
 
+                while (Poke1hp > 0 && Poke2hp > 0) {
+                    if (Poke1power > Poke2power) {
+                        int attack = Poke1power - Poke2hp;
+                        Poke2hp = attack;
+                        System.out.print("You won the round");
+                        playerwin++;
+                        if (Poke2hp < 0) {
+                            break;
+                        }
+                    } else { (Poke1power<Poke2power)
+                    int attack2 = Poke2power - Poke1hp;
+                    Poke1hp = attack2;
+                    System.out.print("The computer won the round");
+                    computerwin++;
+                    if (Poke1hp < 0) {
+                        break;
+                    }
+                    }
                 }
-                movesList.add(move, power);
             }
-            pokemon.add(name, hp, spd);*/
+            if (i == round) {
+                System.out.print("\nFinal Scores\n" + "-----\n");
+            } else {
+                System.out.print("\nWins\n" + "-----\n");
+            }
+            System.out.print("You: " + playerwin + "\nComputer: " + computerwin);
+            if (playerwin > computerwin) {
+                System.out.print("\nYou won the game");
+            } else {
+                System.out.print("\nThe computer won the game");
+            }
         }
 
-        public void displayPokemonList(){
-            pokedex.getPokeList();
-            for (pokemon.size()){
-                System.out.println(Pokemon.getPokemonInfo);
-                System.out.println(Move.getMoveName);
-                System.out.print(Move.getMovePower);
-            }
         }
-
-        public void selectPlayerPokemon(){
-            pokedex.selectPokemon();
-            return playerPokemon;
-        }
-        public void selectComputerPokemon(){
-            pokedex.getRandomPokemon();
-            return computerPokemon;
-        }
-        public void battlePokemon (Pokemon playerPokemon, Pokemon computerPokemon) {
-        }
-    }
-}

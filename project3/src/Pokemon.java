@@ -10,6 +10,7 @@ public class Pokemon {
         this.name = name;
         this.hp = hp;
         this.spd = spd;
+        return null;
     }
 
     public void addMove(Move move){
