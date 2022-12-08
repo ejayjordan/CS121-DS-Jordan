@@ -1,24 +1,20 @@
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 public class StudentXML {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         try
         {
-            File input = new File("student_record.xml");
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(input);
-
             System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
 
-            NodeList personList = doc.getElementsByTagName("person");
+            NodeList personList = doc.getElementsByTagName("student");
             for (int i = 0; i < personList.getLength(); i++)
             {
                 Node node = personList.item(i);
@@ -34,6 +30,14 @@ public class StudentXML {
                             .getElementsByTagName("lastname")
                             .item(0)
                             .getTextContent());
+                    System.out.println("Major: " + element
+                            .getElementsByTagName("major")
+                            .item(0)
+                            .getTextContent());
+                    System.out.println("GPA: " + element
+                            .getElementsByTagName("gpa")
+                            .item(0)
+                            .getTextContent());
                     System.out.println();
                 }
             }
@@ -43,5 +47,4 @@ public class StudentXML {
             e.printStackTrace();
         }
     }
-}
 }
