@@ -10,16 +10,18 @@ import org.xml.sax.SAXException;
 
 public class StudentXML {
     public static void main(String[] args) {
-        try
-        {
-            System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+        try {
+            File input = new File("student_record.xml");
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(input);
 
+            System.out.println("Root element: " +
+                    doc.getDocumentElement().getNodeName());
             NodeList personList = doc.getElementsByTagName("student");
-            for (int i = 0; i < personList.getLength(); i++)
-            {
+            for (int i = 0; i < personList.getLength(); i++) {
                 Node node = personList.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE)
-                {
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     System.out.println("ID: " + element.getAttribute("id"));
                     System.out.println("First Name: " + element
@@ -30,20 +32,18 @@ public class StudentXML {
                             .getElementsByTagName("lastname")
                             .item(0)
                             .getTextContent());
-                    System.out.println("Major: " + element
-                            .getElementsByTagName("major")
-                            .item(0)
-                            .getTextContent());
                     System.out.println("GPA: " + element
                             .getElementsByTagName("gpa")
+                            .item(0)
+                            .getTextContent());
+                    System.out.println("Major: " + element
+                            .getElementsByTagName("major")
                             .item(0)
                             .getTextContent());
                     System.out.println();
                 }
             }
-        }
-        catch (Exception e)
-        {
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
