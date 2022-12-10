@@ -3,13 +3,13 @@
     <student id="1">
         <firstname>Jim</firstname>
         <lastname>Halpert</lastname>
+        <gpa>4.1</gpa>
         <major>CompSci</major>
-        <gpa>3.4</gpa>
     </student>
     <student id="2">
-        <firstname>Jane</firstname>
-        <lastname>Halpert</lastname>
-        <major>CompSci</major>
-        <gpa>4.2</gpa>
+        <firstname>Pam</firstname>
+        <lastname>Beesly</lastname>
+        <gpa>3.6</gpa>
+        <major>Telecommunications</major>
     </student>
 </student>
