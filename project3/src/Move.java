@@ -10,4 +10,5 @@ public class Move {
 
     public String getMoveName(){ return moveName;}
     public Integer getMovePower(){ return movePower;}
+
 }
