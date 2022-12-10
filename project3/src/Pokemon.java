@@ -16,6 +16,9 @@ public class Pokemon {
     {
         this.hp = hp;
     }
+    public void setSpd(int spd){
+        this.spd = spd;
+    }
     public String getName()
     {
         return name;

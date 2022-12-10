@@ -1,9 +1,11 @@
 public class Main {
-    public static void main(String[] args){
+    public static Pokemon playerPokemon;
+    public static Pokemon computerPokemon;
+    public static void main(String[] args) {
         PokemonBattle pokemonBattle = new PokemonBattle();
-        //.addPokemon();
+        pokemonBattle.addPokemonToGame();
         pokemonBattle.selectPlayerPokemon();
-        pokemonBattle.selectComputerPokemon();
-        //pokemonBattle.battlePokemon();
+        pokemonBattle.selectComputerPokemon(playerPokemon);
+        pokemonBattle.battlePokemon(playerPokemon, computerPokemon);
     }
 }
